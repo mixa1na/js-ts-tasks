@@ -7,3 +7,14 @@
 module.exports.backToFront = function backToFront(str, symbolsCount) {
   throw new Error('Not implemented');
 };
+module.exports.backToFront = function backToFront(str, symbolsCount) {
+  if (typeof str !== 'string' || typeof symbolsCount !== 'number') {
+    throw new Error('Invalid input');
+  }
+  if (str.length < symbolsCount) {
+    return str;
+  }
+  const front = str.slice(-symbolsCount);
+  const back = str.slice(-symbolsCount); 
+  return front + str + back;
+};

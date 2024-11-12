@@ -4,6 +4,7 @@
  * @param {number} r - radius
  * @returns {number}
  */
-module.exports.volumeCone = function volumeCone(h, r) {
-  throw new Error('Not implemented');
-};
+module.exports.coneVolume = function coneVolume(h, r) {
+    return (1 / 3) * Math.PI * Math.pow(r, 2) * h;
+  };
+  
