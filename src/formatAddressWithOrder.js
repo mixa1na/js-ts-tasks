@@ -8,6 +8,19 @@
  * @param {Array} order
  * @returns {function}
  */
-module.exports.formatAddressWithOrder = function formatAddressWithOrder(order) {
-  throw new Error('Not implemented'); // remove me and write a solution
+module.exports.formatAddressWithOrder = function formatAddressWithOrder(order) 
+{
+  return function (addressData) 
+  {
+    const result = [];
+    for (let i = 0; i < order.length; i++) 
+      {
+      const key = order[i];
+      if (addressData[key]) 
+      {
+        result.push(addressData[key]);
+      }
+    }
+    return result.join(', ');
+  };
 };

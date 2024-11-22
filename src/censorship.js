@@ -13,6 +13,12 @@
  * @param {Array} forbidden
  * @returns {function}
  */
-module.exports.censorship = function censorship(forbidden) {
-  throw new Error('Not implemented'); // remove me and write a solution
+module.exports.censorship = function censorship(forbidden) 
+{
+  return function (str) 
+  {
+    const escapedForbidden = forbidden.map(word => word.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'));
+    const pattern = new RegExp(`(${escapedForbidden.join('|')})`, 'gi');
+    return str.replace(pattern, match => '*'.repeat(match.length));
+  };
 };
