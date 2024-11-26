@@ -8,5 +8,19 @@
  * @returns {Array<number>}
  */
 module.exports.replacement = function replacement(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  if (!Array.isArray(arr)) {
+    throw new TypeError('Input must be an array of numbers');
+  }
+  return arr.map(num => {
+    const absNum = Math.abs(num);
+    if (absNum < 10) {
+      return 1;
+    } else if (absNum < 100) {
+      return 2;
+    } else if (absNum < 1000) {
+      return 3;
+    } else {
+      return 4;
+    }
+  });
 };
