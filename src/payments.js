@@ -23,5 +23,8 @@
  * @returns {function}
  */
 module.exports.payments = function payments(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  function fn(num1, num2) {
+    return Object.values(num1).reduce((acc, val) => acc + val, 0) - Object.values(num2).reduce((acc, val) => acc + val, 0);
+  }
+  return fn;
 };
