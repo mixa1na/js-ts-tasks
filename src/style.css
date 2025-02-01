@@ -1,5 +1,119 @@
-/* your css code here  */
-
 body {
   background: linear-gradient(45deg, #FFD6C3, #FCB5FF, #BEC6FF);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.profile {
+  width: 350px;
+  height: 100%;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 45px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #555;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 18px;
+  color: #ddd;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+}
+
+.stats div {
+  text-align: center;
+}
+
+.stats div span {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.follow {
+  flex: 1;
+  padding: 10px;
+  background-color: #23daf3;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+.else{
+  flex: 1;
+  padding: 10px;
+  background-color: #2e2e2e;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+.highlights {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.highlight {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #4a4a4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.gallery {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
 }
